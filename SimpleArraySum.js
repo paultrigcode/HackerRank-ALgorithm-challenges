@@ -6,4 +6,4 @@ function simpleArraySum(ar) {
 
 }
 
-console.log(simpleArraySum([1,2,3,4,5,6]))
+console.log(simpleArraySum([1,2,3,4]))
