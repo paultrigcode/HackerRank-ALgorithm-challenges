@@ -5,18 +5,42 @@ def kangaroo(x1, v1, x2, v2):
 		a = []
 		b = []
 		i =0
-		check =  any(item in a for item in b)
+		check =False
+		# check =  any(item in a for item in b)
 		while check == False:
-			g = x1+v1
-			h = x2+v2
-			a.append(g)
-			b.append(h)
-		if len(a) == len(b):
-			return "YES"
-		else:
-			return "NO"
+			x1 =x1+v1
+			x2 = x2+v2
+			a.append(x1)
+			b.append(x2)
+			# print(a)
+			# print(b)
+			if a[i] == b[i] and len(a) == len(b):
+				check = True
+				break
+			else:
+				i+=1
 
-	else:
 		return "YES"
 
+	elif x2<x1 and v2>v1 :
+		a = []
+		b = []
+		i =0
+		check =False
+		# check =  any(item in a for item in b)
+		while check == False:
+			x1 =x1+v1
+			x2 = x2+v2
+			a.append(x1)
+			b.append(x2)
+			# print(a)
+			# print(b)
+			if a[i] == b[i] and len(a) == len(b):
+				check = True
+				break
+			else:
+				i+=1
+		return "YES"
+	else:
+		return "NO"
 print(kangaroo(0 ,3, 4, 2))
